@@ -23,7 +23,7 @@ export default function Header() {
           {/* Desktop Navigation Links */}
           <ul className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <li key={link}>
+              <li key={link}> 
                 <a 
                   href="#" 
                   className="text-[13px] hover:text-gray-300 transition-colors"
