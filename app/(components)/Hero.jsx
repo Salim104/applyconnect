@@ -44,7 +44,7 @@ const Hero = () => {
         }}
         className="w-full"
       >
-        <CarouselContent className="-ml-0">
+        <CarouselContent className="ml-0">
           {slides.map((slide, index) => (
             <CarouselItem key={index} className="pl-0">
               <div 

@@ -31,7 +31,7 @@ export default function ProductCard({ product }) {
       {/* Product Info */}
       <div className="space-y-3">
         {/* Product Name */}
-        <h3 className="text-base font-medium text-gray-900 line-clamp-2 min-h-[3rem]">
+        <h3 className="text-base font-medium text-gray-900 line-clamp-2 min-h-12">
           {name}
         </h3>
 

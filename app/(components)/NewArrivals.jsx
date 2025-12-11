@@ -2,11 +2,18 @@
 'use client';
 
 import ProductCard from './ProductCard';
-import appData from '@/lib/data';
+import { useState,useEffect } from 'react';
+import { useAppContext } from '../(context)/AppContext';
 
 export default function NewArrivals() {
-  // Get first 4 products as "new arrivals" (you can customize this logic)
-  const newArrivals = appData.products.slice(0, 8);
+  const { productsList } = useAppContext();
+  const [newArrivals, setNewArrivals] = useState([]);
+
+  useEffect(() => {
+    if (productsList && productsList.length > 0) {
+      setNewArrivals(productsList.slice(0, 8));
+    }
+  }, [productsList]);
 
   return (
     <section className="py-16 px-4 md:px-8 lg:px-16 bg-white">
